@@ -28,4 +28,4 @@ echo "Starting A2DP Relay Bridge..."
 echo "Music Assistant: ${MA_HOST}:${MA_PORT}"
 echo "ESP32 relay: ${ESP32_HOST}:${ESP32_PORT}"
 
-exec /a2dp-relay-bridge -config "$BRIDGE_CONFIG"
+exec /usr/local/bin/a2dp-bridge -config "$BRIDGE_CONFIG"
