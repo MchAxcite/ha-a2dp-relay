@@ -1,0 +1,27 @@
+name: "A2DP Relay Bridge"
+version: "1.0.0"
+slug: "a2dp_relay"
+description: "A2DP Relay Bridge for ESP32 nodes and Music Assistant"
+url: "https://github.com/MchAxcite/ha-a2dp-relay"
+
+arch:
+  - amd64
+
+startup: application
+boot: auto
+init: false
+host_network: true
+
+options:
+  music_assistant_host: ""
+  music_assistant_port: 8927
+  esp32_host: ""
+  esp32_port: 6055
+  relay_name: "Bluetooth Relay"
+
+schema:
+  music_assistant_host: str
+  music_assistant_port: port
+  esp32_host: str
+  esp32_port: port
+  relay_name: str
