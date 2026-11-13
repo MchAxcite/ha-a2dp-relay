@@ -17,6 +17,9 @@ music_assistant:
 web:
   listen: ":8099"
 
+streaming:
+  node_buffer: 250ms
+
 state_file: "/data/state.json"
 
 nodes:
