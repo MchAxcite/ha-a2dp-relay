@@ -1,5 +1,5 @@
 name: "A2DP Relay Bridge"
-version: "1.0.1"
+version: "1.0.2"
 slug: "a2dp_relay"
 description: "A2DP Relay Bridge for ESP32 nodes and Music Assistant"
 url: "https://github.com/MchAxcite/ha-a2dp-relay"
