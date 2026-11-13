@@ -297,15 +297,8 @@ func (s *streamer) run(ctx context.Context, fresh bool) error {
 				h.log.Warn("timeline shifted, rebasing drift correction", "ms", dev.Milliseconds())
 				ref, dev, correction = ewma, 0, 0
 			}
-			// Start correcting at 20 ms, stop once back within 5 ms.
-			switch {
-			case dev < -20*time.Millisecond:
-				correction = -1 // late
-			case dev > 20*time.Millisecond:
-				correction = 1 // early
-			case dev > -5*time.Millisecond && dev < 5*time.Millisecond:
 				correction = 0
-			}
+
 		}
 		var playAt time.Time
 		if correction == 1 {

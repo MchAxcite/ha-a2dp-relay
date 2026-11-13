@@ -12,7 +12,7 @@ RUN go mod download
 COPY src/ ./
 
 ARG VERSION
-ENV VERSION=ha-48k-test1
+ENV VERSION=ha-48k-test2
 RUN CGO_ENABLED=1 go build -trimpath \
     -ldflags="-s -w -X github.com/sl1288/a2dp-relay-bridge/internal/bridge.Version=${VERSION}" \
     -o /out/a2dp-bridge ./cmd/a2dp-bridge
